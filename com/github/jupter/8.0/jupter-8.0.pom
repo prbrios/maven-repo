@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.github</groupId>
+  <artifactId>jupter</artifactId>
+  <version>8.0</version>
+  <packaging>jar</packaging>
+  <name>jupter</name>
+  <description>Pacote Jupter</description>
+  <url>http://www.example.com</url>
+  <developers>
+    <developer>
+      <id>prbrios</id>
+      <name>Paulo Rios</name>
+      <email>prbrios@gmail.com</email>
+    </developer>
+  </developers>
+  <licenses>
+    <license>
+      <name>GNU Lesser General Public License</name>
+      <url>http://www.gnu.org/licenses/lgpl-2.1.txt</url>
+    </license>
+  </licenses>
+  <pluginRepositories>
+    <pluginRepository>
+        <id>synergian-repo</id>
+        <url>https://raw.github.com/synergian/wagon-git/releases</url>
+    </pluginRepository>
+  </pluginRepositories>
+  <!--distributionManagement>
+    <repository>
+        <id>webgexteam</id>
+        <name>Bitbucket repository</name>
+        <url>git:master://git@bitbucket.org:webgexteam/maven-ugx.git</url>
+    </repository>
+  </distributionManagement-->
+  <distributionManagement>
+    <repository>
+        <id>maven-repo</id>
+        <name>Git repository</name>
+        <url>git:main://git@github.com:prbrios/maven-repo.git</url>
+    </repository>
+  </distributionManagement>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.mashape.unirest</groupId>
+      <artifactId>unirest-java</artifactId>
+      <version>1.4.9</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.12.0</version>
+    </dependency>
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.27</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <extensions>
+        <extension>
+            <groupId>ar.com.synergian</groupId>
+            <artifactId>wagon-git</artifactId>
+            <version>0.2.5</version>
+        </extension>
+    </extensions>
+  </build>
+</project>
